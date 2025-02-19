@@ -76,7 +76,7 @@ The restored video will be saved as `./output/restored.mp4`.
 Here is the visualization of the demo results, showing the orginal, compressed and restored videos.
 
 * **Orignal video:** `./visualization/original.mp4`  
-It is directly encoded with the raw frames (1280x720, RGB 24bit color space, MPEG-4, duration: 6s) from the BDD100K video dataset. The size is about **4.3MB**.
+It is directly encoded with the raw frames (1280x720, RGB 24bit color space, MPEG-4, duration: 6s) from the BDD100K video dataset. The size is about **5.8MB**.
 
 <video width="640" height="360" controls>
   <source src="./visualization/original.mp4" type="video/mp4">
