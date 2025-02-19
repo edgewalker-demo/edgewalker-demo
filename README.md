@@ -76,7 +76,7 @@ The restored video will be saved as `./output/restored.mp4`.
 Here is the visualization of the demo results, showing the orginal, compressed and restored videos.
 
 * **Orignal video:** `./visualization/original.mp4`  
-It is directly encoded with the raw frames (1280x720, RGB 24bit color space, MPEG-4, duration: 6s) from the BDD100K video dataset. The size is about **4MB**.
+It is directly encoded with the raw frames (1280x720, RGB 24bit color space, MPEG-4, duration: 6s) from the BDD100K video dataset. The size is about **4.3MB**.
 
 <video width="640" height="360" controls>
   <source src="./visualization/original.mp4" type="video/mp4">
@@ -88,7 +88,7 @@ It is directly encoded with the raw frames (1280x720, RGB 24bit color space, MPE
 
 
 * **Compressed video:**  `./visualization/compressed.mp4`  
-EdgeWalker's encoder conducts **semantic-bitwidth-resolution compression** on the BDD100K raw frames, and then saves the semantic features (160x90, 4bit color space with 3 semantic channels, MPEG-4, duration: 6s) in the PNG format for video encoding. The size is about **363KB**.
+EdgeWalker's encoder conducts **semantic-bitwidth-resolution compression** on the BDD100K raw frames, and then saves the semantic features (160x90, 4bit color space with 3 semantic channels, MPEG-4, duration: 6s) in the PNG format for video encoding. The size is about **323KB**.
 
 <video width="640" height="360" controls>
   <source src="./visualization/compressed.mp4" type="video/mp4">
@@ -100,7 +100,7 @@ EdgeWalker's encoder conducts **semantic-bitwidth-resolution compression** on th
 
 
 * **Restored video:**  `./visualization/restored.mp4`  
-EdgeWalker's decoder conducts the inverse process, i.e., **resolution-bitwidth-semantic restoration**, on the compressed frames and finally obtains the restored frames (1280x720, RGB 24bit color space, MPEG-4, duration: 6s) for video encoding. The size is about **6MB**.
+EdgeWalker's decoder conducts the inverse process, i.e., **resolution-bitwidth-semantic restoration**, on the compressed frames and finally obtains the restored frames (1280x720, RGB 24bit color space, MPEG-4, duration: 6s) for video encoding. The size is about **6.1MB**.
 
 <video width="640" height="360" controls>
   <source src="./visualization/restored.mp4" type="video/mp4">
