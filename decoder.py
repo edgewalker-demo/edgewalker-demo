@@ -46,7 +46,7 @@ schedule_opt = {'schedule':'linear', 'n_timestep':4, 'linear_start':1e-4, 'linea
 print("Model loading ...")
 
 sr3 = SR3(device, img_size=img_size, LR_size=img_size, loss_type='l1',
-                dataloader=test_dataloader, testloader=test_dataloader, schedule_opt=schedule_opt,
+                hr_dataloader='------', lr_dataloader='------', schedule_opt=schedule_opt,
                 save_path1='..',save_path2='..',load_path='./model/BDD100K_ldm.pt',load=True,
                 lr=1e-6, distributed=False)
 AE= TinyAE(encoder_path='./model/BDD100K_encoder.pt', 
