@@ -475,12 +475,12 @@ class Diffusion(nn.Module):
 
 
 class SR3():
-    def __init__(self, device, img_size, LR_size, loss_type, dataloader, testloader,
+    def __init__(self, device, img_size, LR_size, loss_type, hr_dataloader, lr_dataloader,
                     schedule_opt, save_path1, save_path2,load_path=None, load=False,out_channel=3,
                     lr=1e-5, distributed=False):
         super(SR3, self).__init__()
-        self.dataloader = dataloader
-        self.testloader = testloader
+        self.hr_dataloader = hr_dataloader
+        self.lr_dataloader = lr_dataloader
         self.device = device
         self.save_path1 = save_path1
         self.save_path2 = save_path2
@@ -521,7 +521,7 @@ class SR3():
         for i in tqdm(range(epoch)):
             train_loss = 0
             self.sr3.train()        
-            for (A_images, _), (B_images, _) in zip(self.dataloader, self.testloader): 
+            for (A_images, _), (B_images, _) in zip(self.hr_dataloader , self.lr_dataloader): 
       
                 imgs_HR = A_images.to(self.device)
                 imgs_SR = B_images.to(self.device)
